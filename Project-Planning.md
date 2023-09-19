@@ -39,7 +39,7 @@ List what you do not like about each site:
 My application will be much more streamlined and to the point no ads all around or other information drawing the user away from the primary focus of the application
 
 ## Create wireframes and provide link for each page (minimum of 4-5 pages) including Home, About Me, Contact Us and 1-2 other pages demonstrating the specific functionality of your capstone's purpose
-https://docs.google.com/document/d/1RjbobUl1HbCn_FvcqMAdsShp7V4eBFMw6AfxocwGgcs/edit
+https://docs.google.com/document/d/1bTPMzgDu7_wkGNFFcrjxkO9frNbK5LJVIK_tQgJs2nc/edit
 ## Create and provide link to User Flow Diagram
 https://docs.google.com/document/d/1cXU2bhClu83IV38t8sRAsJuzAABmi_qUVrfABpXCHdw/edit
 ## Create and provide link to SWOT Analysis
