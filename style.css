@@ -1,0 +1,25 @@
+header {
+    background-image: url(https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header > h1{
+    color: darkgreen;
+    font-size: 10rem;
+    background-color: yellow;
+    border-radius: 25%;
+  }
+
+  .firstPage{
+    border-radius: 5rem;
+    font-size: 2rem;
+    padding: 1.5rem;
+    background-color: ivory;
+
+  }
