@@ -1,6 +1,6 @@
 import html from "html-literal";
 
-export default () => html ` 
+export default (state) => html ` 
 <h1 class="logo">Eatr</h1>
 <button
     class="firstPage">
