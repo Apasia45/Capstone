@@ -1,5 +1,5 @@
 import html from "html-literal";
 
-export default (state) => html`
+export default () => html`
 <h4>Set your price range<h4>
 `;
