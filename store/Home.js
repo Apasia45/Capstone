@@ -1,5 +1,4 @@
 export default {
-    header: "Eatr",
-    view: "Home"
-  };
-  
+  header: "Eatr",
+  view: "Home"
+};
