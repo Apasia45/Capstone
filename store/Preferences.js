@@ -1,4 +1,4 @@
 export default {
-    header:"Preferences",
-    view:"Preferences"
+  header: "Preferences",
+  view: "Preferences"
 };
