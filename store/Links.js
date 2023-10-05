@@ -3,5 +3,6 @@ export default [
   { title: "Contact", text: "Contact" },
   { title: "MainRestaurant", text: "MainRestaurant" },
   { title: "Preferences", text: "Preferences" },
-  { title: "Review", text: "Review" }
+  { title: "Review", text: "Review" },
+  { title: "Yes", text: "Yes" }
 ];
