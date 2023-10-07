@@ -1,8 +1,8 @@
 export default [
   { title: "Home", text: "Home" },
   { title: "Contact", text: "Contact" },
-  { title: "MainRestaurant", text: "MainRestaurant" },
+  { title: "Mainrestaurant", text: "Mainrestaurant" },
   { title: "Preferences", text: "Preferences" },
   { title: "Review", text: "Review" },
-  { title: "Yes", text: "Yes" }
+  { title: "Yesbutton", text: "Yesbutton" }
 ];

@@ -1,4 +1,4 @@
-header {
+#home {
     background-image: url(https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
     background-size: cover;
     height: 100vh;
@@ -9,17 +9,63 @@ header {
     flex-direction: column;
   }
 
-  header>h1{
+  #home>h1{
     color: lightgray;
     font-size: 10rem;
     background-color: darkslategrey;
     border-radius: 25%;
+    padding: 1.5rem;
   }
 
-  .firstPage{
-    border-radius: 5rem;
+  .cont{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 20px;
     font-size: 2rem;
     padding: 1.5rem;
-    background-color: ivory;
-
+    text-decoration: none;
   }
+
+  #contactme{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+#pref{
+    background-image: url(https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #contactBackGround{
+    background-image: url(https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #contactBackGround > h3{
+    color: darkslategray;
+    background-color: lightgray;
+    padding: 1.5rem;
+    border-radius: .5rem;
+  }
+
+  #BTH{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+
