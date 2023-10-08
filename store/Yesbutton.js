@@ -1,4 +1,4 @@
 export default {
   header: "Yes",
-  view: "Yes"
+  view: "Yesbutton"
 };
