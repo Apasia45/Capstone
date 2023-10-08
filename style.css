@@ -69,3 +69,20 @@
   }
 
 
+  #backtopref{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  #leavereview{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  #yesbtn{
+
+  }

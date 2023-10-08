@@ -4,12 +4,12 @@ import html from "html-literal";
 export default state => {
   let restaurant = state.restaurants[0];
   return html`
-    <div id="topButtons">
-      <a href="Preferences" data-navigo>Back to Preferences</a>
-      <a href="Review" data-navigo>Leave a review</a>
+    <div id="topbuttons">
+      <a id="backtopref" href="Preferences" data-navigo>Back to Preferences</a>
+      <a id="leavereview" href="Review" data-navigo>Leave a review</a>
     </div>
     <h3>${restaurant.name}</h3>
-    <a href="Yesbutton" data-navigo>
+    <a id="yesbtn" href="Yesbutton" data-navigo>
       <h2>Yes</h2>
     </a>
     <a id="no">
