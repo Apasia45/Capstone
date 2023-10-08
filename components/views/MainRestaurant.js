@@ -15,6 +15,9 @@ export default state => {
     <a id="no">
       <h2>No</h2>
     </a>
+    <div id="restaurantimg">
+      <img src="${restaurant.image_url}" />
+    </div>
   `;
 };
 //Put in big letters fixed up and maybe left if possible to pull the first image of the restaurant
