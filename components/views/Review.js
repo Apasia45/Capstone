@@ -3,6 +3,8 @@ import html from "html-literal";
 export default () => html`
   <a href="Mainrestaurant" data-navigo>Back to Food</a>
   <h2>Leave a review on INSTERT CURRENT RESTURANT here</h2>
+  <h3>DISPLAY OTHER REVIEWS ON CURRENT RESTAURASNT HERE</h3>
+  <h3>USE SAME BACKGROUND IMG FROM MAIN RESTAURANT</h3>
 `;
 
 //Text box for user feed back maybe a star rating system, show other users feed back wont be

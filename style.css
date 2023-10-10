@@ -96,7 +96,16 @@
     flex-direction: column;
   }
 
-  #restaurantimg>a>h2{
+  #mainRestaurantBody{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 20%;
+    font-size: 2rem;
+    padding: 1.5rem;
+    text-decoration: none;
+  }
+
+  #dropDownMenus{
     color: darkslategray;
     background-color: lightgray;
     border-radius: 20px;
