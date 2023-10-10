@@ -2,22 +2,28 @@ import html from "html-literal";
 
 //Fix "topButtons" to top of screen in opposite corners
 export default state => {
-  let restaurant = state.restaurants[0];
+
+  let restaurant = state.restaurants[5];
+  document.addEventListener("DOMContentLoaded", function() {
+    const restaurantimg = document.getElementById("restaurantimg");
+    const dynamicImageUrl = restaurant.image_url;
+    restaurantimg.style.backgroundImage = `url(${dynamicImageUrl})`;
+  });
   return html`
-    <div id="topbuttons">
+    <section id="resturantimg">
       <a id="backtopref" href="Preferences" data-navigo>Back to Preferences</a>
       <a id="leavereview" href="Review" data-navigo>Leave a review</a>
-    </div>
-    <h3>${restaurant.name}</h3>
-    <a id="yesbtn" href="Yesbutton" data-navigo>
-      <h2>Yes</h2>
-    </a>
-    <a id="no">
-      <h2>No</h2>
-    </a>
-    <div id="restaurantimg">
+      <h3>${restaurant.name}</h3>
+      <a id="yesbtn" href="Yesbutton" data-navigo>
+        <h2>Yes</h2>
+      </a>
+      <a id="no">
+        <h2>No</h2>
+      </a>
+
       <img src="${restaurant.image_url}" />
-    </div>
+    </section>
+
   `;
 };
 //Put in big letters fixed up and maybe left if possible to pull the first image of the restaurant

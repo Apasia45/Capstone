@@ -88,12 +88,19 @@
   }
 
   #restaurantimg{
-    background-size: cover;
-    background-image: initial;
+    background-size: contain;
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  #restaurantimg>a>h2{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 1.5rem;
+    text-decoration: none;
   }
