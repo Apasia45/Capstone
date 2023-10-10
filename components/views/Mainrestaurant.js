@@ -2,6 +2,7 @@ import html from "html-literal";
 
 //Fix "topButtons" to top of screen in opposite corners
 export default state => {
+
   let restaurant = state.restaurants[5];
   document.addEventListener("DOMContentLoaded", function() {
     const restaurantimg = document.getElementById("restaurantimg");
@@ -22,6 +23,7 @@ export default state => {
 
       <img src="${restaurant.image_url}" />
     </section>
+
   `;
 };
 //Put in big letters fixed up and maybe left if possible to pull the first image of the restaurant
