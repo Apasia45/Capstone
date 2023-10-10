@@ -3,12 +3,29 @@ import html from "html-literal";
 export default () => html`
   <section id="pref">
     <a id="BTH" href="Home" data-navigo> Back to Home</a>
-    <h4>
-      Set your price range DROP DOWN MENU WITH DOLLAR SIGN OPTION
-    </h4>
-    <h4>
-      Delivery? PUT YES OR NO OPTION HERE
-    </h4>
+    <div id="dropDownMenus">
+    <form>
+<label for="zip">Enter your zip code.</label>
+<input type="text" id="zip"><br>
+</form>
+    <form>
+      <label for="price">Select your price range</label>
+    <select name="priceRange" id="priceRangeDropDown">
+      <option>any</option selected>
+      <option>$</option>
+      <option>$$</option>
+      <option>$$$</option>
+      <option>$$$$</option>
+    </select>
+</form>
+    <form>
+      <label for="Delivery">Delivery?</label>
+      <select id="yesNoSelectDropDown">
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      </select>
+    </form>
+</div>
     <h4>
       IF THEY SAID NO FOR DELIVERY OPTIONAL DISTANCE DROP DOWN
     </h4>

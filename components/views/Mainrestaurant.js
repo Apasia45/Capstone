@@ -11,14 +11,15 @@ export default state => {
     <section id="resturantimg">
       <a id="backtopref" href="Preferences" data-navigo>Back to Preferences</a>
       <a id="leavereview" href="Review" data-navigo>Leave a review</a>
-      <h3>${restaurant.name}</h3>
-      <a id="yesbtn" href="Yesbutton" data-navigo>
-        <h2>Yes</h2>
-      </a>
-      <a id="no">
-        <h2>No</h2>
-      </a>
-
+      <div id="mainRestaurantBody">
+        <h3>${restaurant.name}</h3>
+        <a id="yesbtn" href="Yesbutton" data-navigo>
+          <h2>Yes</h2>
+        </a>
+        <a id="no">
+          <h2>No</h2>
+        </a>
+      </div>
       <img src="${restaurant.image_url}" />
     </section>
   `;
