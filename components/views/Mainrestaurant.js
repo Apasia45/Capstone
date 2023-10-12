@@ -29,3 +29,5 @@ export default state => {
 //top of screen have a go back to home and from home user can access the contact button, top right
 //of screen have button to leave a review adding a swipe left or right for phones is kinda the whole
 //idea but doubt ill be able to do that anytime soon
+
+//Can you pull an API img straight to CSS
