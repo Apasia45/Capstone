@@ -1,26 +1,32 @@
 import html from "html-literal";
 
 export default state => {
-  let restaurant = state.restaurants[5];
+  let restaurant = state.restaurants[0];
   document.addEventListener("DOMContentLoaded", function() {
     const restaurantimg = document.getElementById("restaurantimg");
     const dynamicImageUrl = restaurant.image_url;
     restaurantimg.style.backgroundImage = `url(${dynamicImageUrl})`;
   });
+
   return html`
-    <section id="resturantimg">
+    <section>
       <a id="backtopref" href="Preferences" data-navigo>Back to Preferences</a>
       <a id="leavereview" href="Review" data-navigo>Leave a review</a>
       <div id="mainRestaurantBody">
         <h3>${restaurant.name}</h3>
+      </div>
+      <div>
         <a id="yesbtn" href="Yesbutton" data-navigo>
           <h2>Yes</h2>
         </a>
+      </div>
+      <div>
         <a id="no">
           <h2>No</h2>
         </a>
       </div>
-      <img src="${restaurant.image_url}" />
+
+      <img class="restaurantimg" src="${restaurant.image_url}" />
     </section>
   `;
 };
@@ -31,3 +37,7 @@ export default state => {
 //idea but doubt ill be able to do that anytime soon
 
 //Can you pull an API img straight to CSS
+
+//Add a top 5 restaurants that saves and you can select from the top 5-10 options
+
+//Under is_closed if "false" display if "true" display next restaurant in array

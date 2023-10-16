@@ -1,3 +1,3 @@
 import html from "html-literal";
 
-export default links => html``;
+export default () => html``;

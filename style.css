@@ -2,7 +2,6 @@
     background-image: url(https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
     background-size: cover;
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +46,6 @@
     background-image: url(https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
     background-size: cover;
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +66,6 @@
     text-decoration: none;
   }
 
-
   #backtopref{
     color: darkslategray;
     background-color: lightgray;
@@ -84,16 +81,14 @@
   }
 
   #yesbtn{
-
-  }
-
-  #restaurantimg{
-    background-size: contain;
-    height: 100vh;
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 20%;
+    font-size: 1rem;
+    padding: .25rem;
+    text-decoration: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
   }
 
   #mainRestaurantBody{
@@ -101,8 +96,12 @@
     background-color: lightgray;
     border-radius: 20%;
     font-size: 2rem;
-    padding: 1.5rem;
-    text-decoration: none;
+    padding: .25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   #dropDownMenus{
@@ -112,4 +111,13 @@
     font-size: 2rem;
     padding: 1.5rem;
     text-decoration: none;
+  }
+
+
+  .restaurantimg{
+    inset: 0;
+    position: absolute;
+    object-fit: contain;
+    z-index: -1;
+    height: 100vh;
   }
