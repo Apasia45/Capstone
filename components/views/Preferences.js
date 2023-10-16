@@ -26,9 +26,6 @@ export default () => html`
       </select>
     </form>
 </div>
-    <h4>
-      IF THEY SAID NO FOR DELIVERY OPTIONAL DISTANCE DROP DOWN
-    </h4>
     <a class="cont" href="Mainrestaurant" data-navigo>
       Continue
     </a>
