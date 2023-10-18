@@ -3,7 +3,7 @@
     background-size: cover;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
   }
@@ -12,23 +12,29 @@
     color: lightgray;
     font-size: 10rem;
     background-color: darkslategrey;
-    border-radius: 25%;
+    border-radius: 25px;
     padding: 1.5rem;
   }
 
-  .cont{
+  #cont{
     color: darkslategray;
     background-color: lightgray;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 2rem;
     padding: 1.5rem;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+
   }
 
   #contactme{
     color: darkslategray;
     background-color: lightgray;
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 5px;
     text-decoration: none;
   }
 
@@ -38,7 +44,7 @@
     height: 100vh;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
@@ -62,44 +68,50 @@
   #BTH{
     color: darkslategray;
     background-color: lightgray;
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 5px;
     text-decoration: none;
+    display: flex;
+    justify-content: left;
   }
 
   #backtopref{
     color: darkslategray;
     background-color: lightgray;
-    border-radius: 10px;
+    border-radius: 5px;
+    padding:5px;
     text-decoration: none;
   }
 
   #leavereview{
     color: darkslategray;
     background-color: lightgray;
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 5px;
     text-decoration: none;
   }
 
   #yesbtn{
     color: darkslategray;
     background-color: lightgray;
-    border-radius: 20%;
+    border-radius: 20px;
     font-size: 1rem;
-    padding: .25rem;
+    padding: 5px;
     text-decoration: none;
     display: flex;
+    justify-content: space-around;
 
   }
 
   #mainRestaurantBody{
     color: darkslategray;
     background-color: lightgray;
-    border-radius: 20%;
+    border-radius: 20px;
     font-size: 2rem;
-    padding: .25rem;
+    padding: 20px;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
@@ -119,5 +131,4 @@
     position: absolute;
     object-fit: contain;
     z-index: -1;
-    height: 100vh;
   }

@@ -23,10 +23,11 @@ export default () => html`
       <select id="yesNoSelectDropDown">
         <option value="Y">Yes</option>
         <option value="N">No</option>
+        <option value="Blank"></option>
       </select>
     </form>
 </div>
-    <a class="cont" href="Mainrestaurant" data-navigo>
+    <a id="cont" href="Mainrestaurant" data-navigo>
       Continue
     </a>
   </section>

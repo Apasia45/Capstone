@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default state => {
-  let restaurant = state.restaurants[0];
+  let restaurant = state.restaurants[4];
   document.addEventListener("DOMContentLoaded", function() {
     const restaurantimg = document.getElementById("restaurantimg");
     const dynamicImageUrl = restaurant.image_url;
