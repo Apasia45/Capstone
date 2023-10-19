@@ -42,7 +42,12 @@ app.get("/status", (request, response) => {
   response.send(JSON.stringify({ message: "Service healthy" }));
 });
 
-app.use(); // use the myMiddleware for every request to the app
+const myMiddleware = (request, response, next) => {
+  // do something with request and/or response
+  next(); // tell express to move to the next middleware function
+};
+
+app.use(myMiddleware); // use the myMiddleware for every request to the app
 
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040
