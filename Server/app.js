@@ -1,10 +1,24 @@
 // 'Import' the Express module instead of http
 import express from "express";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
 // Initialize the Express application
 const app = express();
 // Load environment variables from .env file
 dotenv.config();
+
+mongoose.connect(process.env.MONGODB, {
+  // Configuration options to remove deprecation warnings, just include them to remove clutter
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "Connection Error:"));
+db.once(
+  "open",
+  console.log.bind(console, "Successfully opened connection to Mongo!")
+);
 
 const PORT = process.env.PORT || 4040;
 
@@ -42,12 +56,12 @@ app.get("/status", (request, response) => {
   response.send(JSON.stringify({ message: "Service healthy" }));
 });
 
-const myMiddleware = (request, response, next) => {
-  // do something with request and/or response
-  next(); // tell express to move to the next middleware function
-};
+// const myMiddleware = (request, response, next) => {
+//   // do something with request and/or response
+//   next(); // tell express to move to the next middleware function
+// };
 
-app.use(myMiddleware); // use the myMiddleware for every request to the app
+// app.use(myMiddleware); // use the myMiddleware for every request to the app
 
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040
