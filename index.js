@@ -13,15 +13,36 @@ function render(state = store.Home) {
       ${Main(state)}
       ${Footer()}
     `;
-  afterRender();
+  afterRender(state);
   router.updatePageLinks();
 }
 
-function afterRender() {
-  // add menu toggle to bars icon in nav bar
-  // document.querySelector(".fa-bars").addEventListener("click", () => {
-  //   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-  // });
+// function afterRender(state) {
+//   if (state.view === "Mainrestaurant") {
+
+//   }
+// }
+//Set the img selector from main restaurant in here somehow and also maybe use a query selector here
+//for the on click function
+
+if (state.view === "Review") {
+  // Add an event handler for the submit button on the form
+  document.querySelector("form").addEventListener("submit", event => {
+    event.preventDefault();
+
+    // Get the form element
+    const inputList = event.target.elements;
+    console.log("Input Element List", inputList);
+
+    // Create an empty array to hold the toppings
+    const Reviews = [];
+
+    const requestData = {
+      ReviewTextBox: inputList.ReviewTextBox,
+      ReviewStars: inputList.ReviewStars,
+      Reviews: Reviews
+    };
+  });
 }
 
 router.hooks({

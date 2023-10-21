@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default state => {
-  let restaurant = state.restaurants[0];
+  let restaurant = state.restaurants[6];
   document.addEventListener("DOMContentLoaded", function() {
     const restaurantimg = document.getElementById("restaurantimg");
     const dynamicImageUrl = restaurant.image_url;
@@ -11,8 +11,9 @@ export default state => {
   let arrayBaseline = 0;
   function nextRestaurant() {
     restaurant[arrayBaseline++];
+    console.log(arrayBaseline);
   }
-
+  window.nextRestaurant = nextRestaurant;
   return html`
     <section>
       <a id="backtopref" href="Preferences" data-navigo>Back to Preferences</a>

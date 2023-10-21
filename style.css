@@ -111,9 +111,10 @@
     padding: 20px;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+
   }
 
   #dropDownMenus{
@@ -131,4 +132,21 @@
     position: absolute;
     object-fit: contain;
     z-index: -1;
+  }
+
+  #backToRestaurants{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+  }
+
+  #textBox{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 1.5rem;
+    text-decoration: none;
   }
