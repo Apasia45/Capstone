@@ -21,11 +21,13 @@ export default () => html`
     <form>
       <label for="Delivery">Delivery?</label>
       <select id="yesNoSelectDropDown">
+      <option value="Blank"></option>
         <option value="Y">Yes</option>
         <option value="N">No</option>
-        <option value="Blank"></option>
+
       </select>
     </form>
+    <input type="submit" name="SetPreferences" value="Submit Preferences" />
 </div>
     <a id="cont" href="Mainrestaurant" data-navigo>
       Continue
