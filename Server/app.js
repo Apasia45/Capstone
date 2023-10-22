@@ -58,34 +58,34 @@ app.get("/status", (request, response) => {
   response.send(JSON.stringify({ message: "Service healthy" }));
 });
 
-app.get("/yelp", async (request, response) => {
-  const params = request.query;
-  console.log("yelpTest - params:", params);
-  const options = {
-    method: "GET",
-    url: "https://api.yelp.com/v3/businesses/search",
-    params: {
-      location: params.location,
-      attributes: params.attributes,
-      term: params.term,
-      zip_code: params.zip_code,
-      price: params.price
-    },
-    headers: {
-      accept: "application/json",
-      Authorization: `Bearer ${process.env.YELP_API_KEY}`
-    }
-  };
-  await axios
-    .request(options)
-    .then(function(yelpResponse) {
-      console.log("yelpTest - data:", yelpResponse.data);
-      response.json(yelpResponse.data.businesses);
-    })
-    .catch(function(error) {
-      console.error(error);
-    });
-});
+// app.get("/yelp", async (request, response) => {
+//   const params = request.query;
+//   console.log("yelpTest - params:", params);
+//   const options = {
+//     method: "GET",
+//     url: "https://api.yelp.com/v3/businesses/search",
+//     params: {
+//       location: params.location,
+//       attributes: params.attributes,
+//       term: params.term,
+//       zip_code: params.zip_code,
+//       price: params.price
+//     },
+//     headers: {
+//       accept: "application/json",
+//       Authorization: `Bearer ${process.env.YELP_API_KEY}`
+//     }
+//   };
+//   await axios
+//     .request(options)
+//     .then(function(yelpResponse) {
+//       console.log("yelpTest - data:", yelpResponse.data);
+//       response.json(yelpResponse.data.businesses);
+//     })
+//     .catch(function(error) {
+//       console.error(error);
+//     });
+// });
 
 // const myMiddleware = (request, response, next) => {
 //   // do something with request and/or response
