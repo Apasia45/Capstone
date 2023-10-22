@@ -1,7 +1,7 @@
 // 'Import' the Express module instead of http
 import express from "express";
 import dotenv from "dotenv";
-const axios = require("axios");
+// import axios from "axios";
 import mongoose from "mongoose";
 import reviews from "./routers/reviews.js";
 
