@@ -33,13 +33,9 @@ function afterRender(state) {
       const inputList = event.target.elements;
       console.log("Input Element List", inputList);
 
-      // Create an empty array to hold the toppings
-      const Reviews = [];
-
       const requestData = {
         ReviewTextBox: inputList.ReviewTextBox,
-        ReviewStars: inputList.ReviewStars,
-        Reviews: Reviews
+        ReviewStars: inputList.ReviewStars
       };
     });
   }
