@@ -17,34 +17,33 @@ function render(state = store.Home) {
   router.updatePageLinks();
 }
 
-// function afterRender(state) {
-//   if (state.view === "Mainrestaurant") {
+function afterRender(state) {
+  // if (state.view === "Mainrestaurant") {
+  // }
 
-//   }
-// }
-//Set the img selector from main restaurant in here somehow and also maybe use a query selector here
-//for the on click function
+  //Set the img selector from main restaurant in here somehow and also maybe use a query selector here
+  //for the on click function
 
-if (state.view === "Review") {
-  // Add an event handler for the submit button on the form
-  document.querySelector("form").addEventListener("submit", event => {
-    event.preventDefault();
+  if (state.view === "Review") {
+    // Add an event handler for the submit button on the form
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
 
-    // Get the form element
-    const inputList = event.target.elements;
-    console.log("Input Element List", inputList);
+      // Get the form element
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
 
-    // Create an empty array to hold the toppings
-    const Reviews = [];
+      // Create an empty array to hold the toppings
+      const Reviews = [];
 
-    const requestData = {
-      ReviewTextBox: inputList.ReviewTextBox,
-      ReviewStars: inputList.ReviewStars,
-      Reviews: Reviews
-    };
-  });
+      const requestData = {
+        ReviewTextBox: inputList.ReviewTextBox,
+        ReviewStars: inputList.ReviewStars,
+        Reviews: Reviews
+      };
+    });
+  }
 }
-
 router.hooks({
   before: (done, params) => {
     const view =
