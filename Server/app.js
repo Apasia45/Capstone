@@ -3,6 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 const axios = require("axios");
 import mongoose from "mongoose";
+import reviews from "./routers/reviews.js";
 
 // Initialize the Express application
 const app = express();
@@ -96,4 +97,7 @@ app.get("/status", (request, response) => {
 
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040
+
+app.use("/reviews", reviews);
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
