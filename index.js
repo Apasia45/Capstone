@@ -37,6 +37,21 @@ function afterRender(state) {
         ReviewTextBox: inputList.ReviewTextBox,
         ReviewStars: inputList.ReviewStars
       };
+
+      console.log("request Body", requestData);
+
+      axios
+        // Make a POST request to the API to create a new pizza
+        .post(`${process.env.REVIEW_API_URL}/reviews`, requestData)
+        .then(response => {
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Review.reviews.push(response.data);
+          router.navigate("/Review");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
     });
   }
 }
