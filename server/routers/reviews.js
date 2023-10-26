@@ -38,7 +38,7 @@ router.get("/", async (request, response) => {
   }
 });
 
-// Get a single pizza by ID
+// Get a single review by ID
 router.get("/:id", async (request, response) => {
   try {
     const data = await Review.findById(request.params.id);
@@ -52,7 +52,7 @@ router.get("/:id", async (request, response) => {
   }
 });
 
-// Delete a pizza by ID
+// Delete a review by ID
 router.delete("/:id", async (request, response) => {
   try {
     const data = await Review.findByIdAndRemove(request.params.id, {});
@@ -65,7 +65,5 @@ router.delete("/:id", async (request, response) => {
     return response.status(500).json(error.errors);
   }
 });
-
-// Update a single pizza by ID
 
 export default router;

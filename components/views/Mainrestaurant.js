@@ -1,25 +1,12 @@
 import html from "html-literal";
 
 export default state => {
-  let restaurant = state.restaurants[6];
-  document.addEventListener("DOMContentLoaded", function() {
-    const restaurantimg = document.getElementById("restaurantimg");
-    const dynamicImageUrl = restaurant.image_url;
-    restaurantimg.style.backgroundImage = `url(${dynamicImageUrl})`;
-  });
-
-  let arrayBaseline = 0;
-  function nextRestaurant() {
-    restaurant[arrayBaseline++];
-    console.log(arrayBaseline);
-  }
-  window.nextRestaurant = nextRestaurant;
   return html`
     <section>
       <a id="backtopref" href="Preferences" data-navigo>Back to Preferences</a>
       <a id="leavereview" href="Review" data-navigo>Leave a review</a>
       <div id="mainRestaurantBody">
-        <h3>${restaurant.name}</h3>
+        <h3>${state.currentRestaurant.name}</h3>
       </div>
       <div>
         <a id="yesbtn" href="Yesbutton" data-navigo>
@@ -27,12 +14,12 @@ export default state => {
         </a>
       </div>
       <div>
-        <a id="no">
-          <h2 onclick="nextRestaurant()">No</h2>
+        <a id="nobtn">
+          <h2>No</h2>
         </a>
       </div>
 
-      <img class="restaurantimg" src="${restaurant.image_url}" />
+      <img class="restaurantimg" src="${state.currentRestaurant.image_url}" />
     </section>
   `;
 };

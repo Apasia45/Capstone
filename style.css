@@ -103,6 +103,17 @@
 
   }
 
+  #nobtn{
+    color: darkslategray;
+    background-color: lightgray;
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 5px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
   #mainRestaurantBody{
     color: darkslategray;
     background-color: lightgray;

@@ -1,6 +1,52 @@
 export default {
   header: "Mainrestaurant",
   view: "Mainrestaurant",
+  currentRestaurant: {
+    id: "tLHgJ_81qdi2bdyxMcnBuA",
+    alias: "big-chief-roadhouse-wildwood-2",
+    name: "Big Chief Roadhouse",
+    image_url:
+      "https://s3-media2.fl.yelpcdn.com/bphoto/ByVsM87ZjAf7hsSoXpSXjg/o.jpg",
+    is_closed: false,
+    url:
+      "https://www.yelp.com/biz/big-chief-roadhouse-wildwood-2?adjust_creative=Pjbe82UDUp64l2hzYLa1bQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Pjbe82UDUp64l2hzYLa1bQ",
+    review_count: 207,
+    categories: [
+      {
+        alias: "tradamerican",
+        title: "American (Traditional)"
+      },
+      {
+        alias: "burgers",
+        title: "Burgers"
+      },
+      {
+        alias: "sandwiches",
+        title: "Sandwiches"
+      }
+    ],
+    rating: 4.0,
+    coordinates: {
+      latitude: 38.580207,
+      longitude: -90.660638
+    },
+    transactions: ["delivery", "pickup"],
+    price: "$$",
+    location: {
+      address1: "17352 Manchester Rd",
+      address2: "",
+      address3: "",
+      city: "Wildwood",
+      zip_code: "63038",
+      country: "US",
+      state: "MO",
+      display_address: ["17352 Manchester Rd", "Wildwood, MO 63038"]
+    },
+    phone: "+16364583200",
+    display_phone: "(636) 458-3200",
+    distance: 541.3194533082868
+  },
+  currentIndex: 0,
   restaurants: [
     {
       id: "tLHgJ_81qdi2bdyxMcnBuA",
