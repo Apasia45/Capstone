@@ -34,7 +34,6 @@ export default () => html`
 
         <input type="submit" name="submit" value="Submit Review" />
       </div>
-      <h3>USE SAME BACKGROUND IMG FROM MAIN RESTAURANT</h3>
     </form>
   </section>
 `;
