@@ -18,8 +18,21 @@ function render(state = store.Home) {
 }
 
 function afterRender(state) {
-  // if (state.view === "Mainrestaurant") {
-  // }
+  if (state.view === "Mainrestaurant") {
+    document.getElementById("nobtn").addEventListener("click", function() {
+      if (state.currentIndex === state.restaurants.length - 1) {
+        store.Mainrestaurant.currentIndex = 0;
+        console.log(state.restaurants.length);
+      } else {
+        store.Mainrestaurant.currentIndex++;
+      }
+      console.log(store.Mainrestaurant.currentIndex);
+      store.Mainrestaurant.currentRestaurant =
+        state.restaurants[store.Mainrestaurant.currentIndex];
+
+      router.navigate("/Mainrestaurant");
+    });
+  }
 
   //Set the img selector from main restaurant in here somehow and also maybe use a query selector here
   //for the on click function
@@ -115,6 +128,14 @@ router.hooks({
       default:
         done();
     }
+  },
+  already: params => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.data.view)
+        : "Home";
+
+    render(store[view]);
   }
 });
 
