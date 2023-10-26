@@ -1,6 +1,6 @@
 import html from "html-literal";
 
-export default () => html`
+export default state => html`
   <a href="Mainrestaurant" data-navigo id="backToRestaurants"
     >Back to restaurants</a
   >
@@ -35,6 +35,20 @@ export default () => html`
         <input type="submit" name="submit" value="Submit Review" />
       </div>
     </form>
+  </section>
+
+  <section id="reviewList">
+    <table id="reviewTable">
+      <tr>
+        <th>Star rating</th>
+        <th>Review</th>
+      </tr>
+      ${state.reviews
+        .map(review => {
+          return `<tr><td>${review.reviewStars}</td><td>${review.reviewTextBox}</td>`;
+        })
+        .join("")}
+    </table>
   </section>
 `;
 
