@@ -9,7 +9,7 @@ export default state => {
         <h3>${state.currentRestaurant.name}</h3>
       </div>
       <div>
-        <a id="yesbtn" href="Yesbutton" data-navigo>
+        <a id="yesbtn" href=${state.currentRestaurant.url}>
           <h2>Yes</h2>
         </a>
       </div>

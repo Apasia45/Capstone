@@ -47,8 +47,8 @@ function afterRender(state) {
       console.log("Input Element List", inputList);
 
       const requestData = {
-        ReviewTextBox: inputList.ReviewTextBox,
-        ReviewStars: inputList.ReviewStars
+        reviewTextBox: inputList.reviewTextBox.value,
+        reviewStars: inputList.stars.value
       };
 
       console.log("request Body", requestData);
@@ -109,22 +109,24 @@ router.hooks({
             done();
           });
         break;
-      // case "Mainrestaurant":
-      //   axios
-      //     .get(
-      //       `https://api.yelp.com/v3/businesses/search?accessToken=${process.env.YELP_API_KEY}`
-      //     )
+      case "Review":
+        // Add a case for each view that needs data from an API
 
-      //     .then(response => {
-      //       console.log("response", response);
-      //       store.Mainrestaurant.restaurants = response.data;
-      //       done();
-      //     })
-      //     .catch(err => {
-      //       console.log(err);
-      //       done();
-      //     });
-      //   break;
+        // New Axios get request utilizing already made environment variable
+        axios
+          .get(`${process.env.REVIEW_API_URL}/reviews`)
+          .then(response => {
+            // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+            console.log("response", response);
+            store.Review.reviews = response.data;
+            done();
+          })
+          // eslint-disable-next-line prettier/prettier
+            .catch((error) => {
+            console.log("It puked", error);
+            done();
+          });
+        break;
       default:
         done();
     }
