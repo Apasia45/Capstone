@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 const reviewSchema = new mongoose.Schema({
   reviewTextBox: {
     type: String,
-    required: true,
     validate: /^[A-Za-z0-9 ]*$/
   },
   reviewStars: {

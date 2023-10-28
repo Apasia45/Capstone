@@ -6,7 +6,6 @@ export default state => html`
   >
   <section id="review">
     <form id="review" method="POST" action="">
-      <h2>Leave a review on INSERT RESTAURANT HERE</h2>
       <fieldset>
         <div id="Stars">
           <label for="reviewStars">Select your rating</label>

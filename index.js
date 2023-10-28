@@ -57,7 +57,7 @@ function afterRender(state) {
         // Make a POST request to the API to create a new pizza
         .post(`${process.env.REVIEW_API_URL}/reviews`, requestData)
         .then(response => {
-          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          //  Then push the new review onto the Review state reviews attribute, so it can be displayed in the pizza list
           store.Review.reviews.push(response.data);
           router.navigate("/Review");
         })
@@ -124,6 +124,22 @@ router.hooks({
           // eslint-disable-next-line prettier/prettier
             .catch((error) => {
             console.log("It puked", error);
+            done();
+          });
+        break;
+
+      case "Mainrestaurant":
+        axios
+          .get(
+            `https://api.yelp.com/v3/businesses/search?accessToken=${process.env.YELP_API_KEY}`
+          )
+          .then(response => {
+            console.log("response", response);
+            store.Mainrestaurant.restaurants = response.data;
+            done();
+          })
+          .catch(err => {
+            console.log(err);
             done();
           });
         break;
