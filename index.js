@@ -75,6 +75,12 @@ router.hooks({
         ? capitalize(params.data.view)
         : "home";
 
+    // let latitude = 38.5592791;
+    // let longitude = -90.6155662;
+
+    let latitude = 37.7749;
+    let longitude = -122.4194;
+
     switch (view) {
       case "Home":
         axios
@@ -114,7 +120,7 @@ router.hooks({
 
         // New Axios get request utilizing already made environment variable
         axios
-          .get(`${process.env.REVIEW_API_URL}/reviews`)
+          .get(`${process.env.EATR_API_URL}/reviews`)
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response);
@@ -129,19 +135,32 @@ router.hooks({
         break;
 
       case "Mainrestaurant":
-        axios
-          .get(
-            `https://api.yelp.com/v3/businesses/search?accessToken=${process.env.YELP_API_KEY}`
-          )
-          .then(response => {
-            console.log("response", response);
-            store.Mainrestaurant.restaurants = response.data;
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            console.log(position);
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+            axios
+              .get(
+                `${process.env.EATR_API_URL}/yelp?latitude=${latitude}&longitude=${longitude}&term=restaurants`
+              )
+              .then(response => {
+                console.log("response", response);
+                store.Mainrestaurant.restaurants = response.data;
+                store.Mainrestaurant.currentRestaurant = response.data[0];
+                done();
+              })
+              .catch(err => {
+                console.log(err);
+                done();
+              });
+          },
+          error => {
+            console.error(error);
             done();
-          })
-          .catch(err => {
-            console.log(err);
-            done();
-          });
+          }
+        );
+
         break;
       default:
         done();
