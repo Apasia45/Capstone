@@ -1,12 +1,5 @@
 import html from "html-literal";
-const successCallback = position => {
-  console.log(position);
-};
 
-const errorCallback = error => {
-  console.error(error);
-};
-navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 export default state => html`
   <section id="home">
     <h1>Eatr</h1>
