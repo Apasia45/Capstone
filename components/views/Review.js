@@ -1,5 +1,5 @@
 import html from "html-literal";
-
+import * as store from "../../store/index";
 export default state => html`
   <a href="Mainrestaurant" data-navigo id="backToRestaurants"
     >Back to restaurants</a
@@ -48,6 +48,12 @@ export default state => html`
         })
         .join("")}
     </table>
+
+    <img
+      class="restaurantimg"
+      src="${store.Mainrestaurant.restaurants[store.Mainrestaurant.currentIndex]
+        .image_url}"
+    />
   </section>
 `;
 
