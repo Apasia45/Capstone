@@ -55,7 +55,7 @@ function afterRender(state) {
 
       axios
         // Make a POST request to the API to create a new review
-        .post(`${process.env.REVIEW_API_URL}/reviews`, requestData)
+        .post(`${process.env.EATR_API_URL}/reviews`, requestData)
         .then(response => {
           //  Then push the new review onto the Review state reviews attribute, so it can be displayed in the pizza list
           store.Review.reviews.push(response.data);
