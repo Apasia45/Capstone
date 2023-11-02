@@ -8,17 +8,17 @@ export default state => html`
     <form id="review" method="POST" action="">
       <fieldset>
         <div id="Stars">
-          <label for="reviewStars">Select your rating</label>
-          <input type="radio" name="stars" id="1_star" value="1" />
+          <legend>Select your rating</legend>
+          <input type="radio" name="stars" id="1Star" value="1" />
           <label for="1Star">1 star</label>
-          <input type="radio" name="stars" id="2_star" value="2" />
-          <label for="2Star">2 star</label>
-          <input type="radio" name="stars" id="3_star" value="3" />
-          <label for="3Star">3 Star</label>
-          <input type="radio" name="stars" id="4_star" value="4" />
-          <label for="4Star">4 Star</label>
-          <input type="radio" name="stars" id="5_star" value="5" />
-          <label for="5Star">5 Star</label>
+          <input type="radio" name="stars" id="2Star" value="2" />
+          <label for="2Star">2 stars</label>
+          <input type="radio" name="stars" id="3Star" value="3" />
+          <label for="3Star">3 Stars</label>
+          <input type="radio" name="stars" id="4Star" value="4" />
+          <label for="4Star">4 Stars</label>
+          <input type="radio" name="stars" id="5Star" value="5" />
+          <label for="5Star">5 Stars</label>
         </div>
       </fieldset>
       <div id="textBox">
@@ -48,13 +48,12 @@ export default state => html`
         })
         .join("")}
     </table>
-
-    <img
-      class="restaurantimg"
-      src="${store.Mainrestaurant.restaurants[store.Mainrestaurant.currentIndex]
-        .image_url}"
-    />
   </section>
+  <img
+    class="restaurantimg"
+    src="${store.Mainrestaurant.restaurants[store.Mainrestaurant.currentIndex]
+      .image_url}"
+  />
 `;
 
 //Text box for user feed back maybe a star rating system, show other users feed back wont be

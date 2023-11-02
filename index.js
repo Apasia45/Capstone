@@ -38,7 +38,6 @@ function afterRender(state) {
   //for the on click function
 
   if (state.view === "Review") {
-    console.log(store.Mainrestaurant.restaurants[2]);
     // Add an event handler for the submit button on the form
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
@@ -55,7 +54,7 @@ function afterRender(state) {
       console.log("request Body", requestData);
 
       axios
-        // Make a POST request to the API to create a new pizza
+        // Make a POST request to the API to create a new review
         .post(`${process.env.REVIEW_API_URL}/reviews`, requestData)
         .then(response => {
           //  Then push the new review onto the Review state reviews attribute, so it can be displayed in the pizza list

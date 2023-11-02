@@ -2,10 +2,10 @@ import html from "html-literal";
 
 export default state => {
   return html`
-    <section>
-      <a id="backtopref" href="Preferences" data-navigo>Back to Preferences</a>
+    <section id="mainBody">
+      <a id="backtopref" href="Home" data-navigo>Back to Home</a>
       <a id="leavereview" href="Review" data-navigo>Leave a review</a>
-      <div id="mainRestaurantBody">
+      <div id="mainRestaurantName">
         <h3>${state.currentRestaurant.name}</h3>
       </div>
       <div>
