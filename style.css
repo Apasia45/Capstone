@@ -212,7 +212,6 @@
   }
 
   #review{
-    background-color: dimgrey;
     display: flex;
     justify-content: space-around;
     align-items: center;
