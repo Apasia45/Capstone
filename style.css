@@ -28,6 +28,17 @@
     align-items: flex-end;
   }
 
+  #cont:hover{
+    color: lightgray;
+    background-color: darkslategray;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
 
   #contactme{
     color: darkslategray;
@@ -85,9 +96,32 @@
     left: 50px;
   }
 
+  #backtopref:hover{
+    color: lightgray;
+    background-color: darkslategray;
+    border-radius: 5px;
+    padding:5px;
+    text-decoration: none;
+    position: fixed;
+    top: 10px;
+    left: 50px;
+  }
+
   #leavereview{
     color: darkslategray;
     background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    position: fixed;
+    top: 10px;
+    right: 50px;
+
+  }
+
+  #leavereview:hover{
+    color: lightgray;
+    background-color: darkslategray;
     border-radius: 5px;
     padding: 5px;
     text-decoration: none;
@@ -109,12 +143,39 @@
     position: fixed;
     bottom: 50px;
     left: 100px;
+  }
 
+  #yesbtn:hover{
+    color: lightgray;
+    background-color: darkslategray;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 50px;
+    left: 100px;
   }
 
   #nobtn{
     color: darkslategray;
     background-color: lightgray;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  #nobtn:hover{
+    color: lightgray;
+    background-color: darkslategray;
     border-radius: 20px;
     font-size: 2rem;
     padding: 50px;
@@ -173,6 +234,14 @@
   #backToRestaurants{
     color: darkslategray;
     background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+  }
+
+  #backToRestaurants:hover{
+    color: lightgray;
+    background-color: darkslategray;
     border-radius: 5px;
     padding: 5px;
     text-decoration: none;
