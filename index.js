@@ -17,6 +17,7 @@ function render(state = store.Home) {
   router.updatePageLinks();
 }
 
+//no button functionality
 function afterRender(state) {
   if (state.view === "Mainrestaurant") {
     document.getElementById("nobtn").addEventListener("click", function() {
@@ -33,9 +34,6 @@ function afterRender(state) {
       router.navigate("/Mainrestaurant");
     });
   }
-
-  //Set the img selector from main restaurant in here somehow and also maybe use a query selector here
-  //for the on click function
 
   if (state.view === "Review") {
     // Add an event handler for the submit button on the form
