@@ -57,7 +57,7 @@ function afterRender(state) {
         // Make a POST request to the API to create a new review
         .post(`${process.env.EATR_API_URL}/reviews`, requestData)
         .then(response => {
-          //  Then push the new review onto the Review state reviews attribute, so it can be displayed in the pizza list
+          //  Then push the new review onto the Review state reviews attribute, so it can be displayed in the review list
           store.Review.reviews.push(response.data);
           router.navigate("/Review");
         })
