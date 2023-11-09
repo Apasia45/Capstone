@@ -68,11 +68,12 @@
     flex-direction: column;
   }
 
-  #contactBackGround > h3{
+  #linkedin{
     color: darkslategray;
     background-color: lightgray;
     padding: 1.5rem;
     border-radius: .5rem;
+    text-decoration: none;
   }
 
   #BTH{
