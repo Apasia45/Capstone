@@ -18,7 +18,9 @@ export default state => {
           <h2>No</h2>
         </a>
       </div>
-      <img class="restaurantimg" src="${state.currentRestaurant.image_url}" />
+      <div class="restaurantimg">
+        <img src="${state.currentRestaurant.image_url}" />
+      </div>
     </section>
   `;
 };
